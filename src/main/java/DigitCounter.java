@@ -1,7 +1,7 @@
 public class DigitCounter {
 
-    public int countDigits(int[] arr) {
+    public int[] countDigits(int[] arr) {
         //TODO()
-        return 0;
+        return null;
     }
 }

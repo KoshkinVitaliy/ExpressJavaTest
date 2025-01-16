@@ -7,14 +7,14 @@ public class StringTransformerTest {
 
     @Test
     public void testTransformWithSingleCharacter() {
-        assertEquals("a", transformer.transform("a"));
+        assertEquals("1", transformer.transform("a"));
         assertEquals("b", transformer.transform("b"));
     }
 
     @Test
     public void testTransformWithTwoCharacters() {
-        assertEquals("1b", transformer.transform("aB")); // 'a' -> 1, 'B' remains
-        assertEquals("c1", transformer.transform("A")); // 'A' -> 1
+        assertEquals("B1", transformer.transform("aB")); // 'a' -> 1, 'B' remains
+        assertEquals("1", transformer.transform("A")); // 'A' -> 1
     }
 
     @Test
@@ -27,11 +27,11 @@ public class StringTransformerTest {
 
     @Test
     public void testTransformWithNoVowels() {
-        assertEquals("bcdfg", transformer.transform("gfdbc"));
+        assertEquals("cbdfg", transformer.transform("gfdbc"));
     }
 
     @Test
     public void testTransformWithAllVowels() {
-        assertEquals("1519", transformer.transform("ioua")); // 'i' -> 9, 'o' -> 15, 'u' -> 21, 'a' -> 1
+        assertEquals("121159", transformer.transform("ioua")); // 'i' -> 9, 'o' -> 15, 'u' -> 21, 'a' -> 1
     }
 }
